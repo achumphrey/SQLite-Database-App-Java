@@ -71,6 +71,7 @@ public class DBManager {
     public Cursor fetch(){
 
         //create a string array of column titles
+        // whose data you want to retrieve
         String[] columns = new String[] {
                 DatabaseHelper._ID,
                 DatabaseHelper.SUBJECT,

@@ -43,12 +43,16 @@ public class AddCountryActivity extends AppCompatActivity implements View.OnClic
                 final String desc = edDesc.getText().toString();
 
                 dbManager.insert(name, desc);
-
-                Intent addIntent = new Intent(AddCountryActivity.this,
-                        CountryListActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(addIntent);
+                this.returnHome();
                 break;
         }
+    }
+
+    private void returnHome(){
+
+        Intent home_intent = new Intent(getApplicationContext(),
+                CountryListActivity.class)
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(home_intent);
     }
 }

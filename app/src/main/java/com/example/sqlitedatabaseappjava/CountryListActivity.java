@@ -20,12 +20,16 @@ public class CountryListActivity extends AppCompatActivity {
     private ListView listView;
     private SimpleCursorAdapter adapter;
 
+    //Array of column titles in the cursor
+    // which was retrieved from the database
     final String[] from = new String[]{
             DatabaseHelper._ID,
             DatabaseHelper.SUBJECT,
             DatabaseHelper.DESC
     };
 
+    //Array of view components to bind the data
+    // from the cursor in order to display them
     final int[] to = new int[]{
             R.id.tvId,
             R.id.tvTitle,

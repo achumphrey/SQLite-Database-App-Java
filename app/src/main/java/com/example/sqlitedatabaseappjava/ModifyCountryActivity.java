@@ -58,7 +58,7 @@ public class ModifyCountryActivity extends AppCompatActivity implements View.OnC
             case R.id.btUpdate:
                 String title = ed_Title.getText().toString();
                 String desc = ed_desc.getText().toString();
-                dbManager.update(_id,title, desc);
+                dbManager.update(_id, title, desc);
                 this.returnHome();
                 break;
 
@@ -67,10 +67,9 @@ public class ModifyCountryActivity extends AppCompatActivity implements View.OnC
                 this.returnHome();
                 break;
         }
-
     }
 
-    public void returnHome(){
+    private void returnHome(){
 
         Intent home_intent = new Intent(getApplicationContext(), 
                 CountryListActivity.class)
