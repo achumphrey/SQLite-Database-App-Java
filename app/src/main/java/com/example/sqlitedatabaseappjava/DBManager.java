@@ -40,6 +40,8 @@ public class DBManager {
         database.insert(DatabaseHelper.TABLE_NAME,
                 null,
                 contentValues);
+
+        this.close();
     }
 
     //Method to update records in the database
@@ -55,6 +57,7 @@ public class DBManager {
                 DatabaseHelper._ID + " = " + _id,
                 null);
 
+        this.close();
         return i;
     }
 
@@ -65,6 +68,8 @@ public class DBManager {
                 DatabaseHelper.TABLE_NAME,
                 DatabaseHelper._ID + " = " + _id,
                 null);
+
+        this.close();
     }
 
     //Method to fetch data from the database table
@@ -90,6 +95,7 @@ public class DBManager {
         if (cursor != null)
             cursor.moveToFirst();
 
+        this.close();
         return cursor;
     }
 }
